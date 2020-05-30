@@ -13,6 +13,8 @@ exports.headlines= (req,res)=>{
     axios.get(top_headlines, {
   params: {
     q:req.body.condition,
+    country:req.body.condition,
+    category:request.body.category,
     apiKey:api_key
   }
 }).then(response => {
@@ -32,8 +34,6 @@ exports.headlines= (req,res)=>{
 
     });
     final_contents.push(content_check);
-    // console.log(final_contents);
-    console.log("-------------------------------------------------------------------------------------------------");
 
   // console.log(final_contents);
    content_check=new Object();
@@ -51,8 +51,6 @@ exports.headlines= (req,res)=>{
 };
  function createNews(final_contents)
  {
-   console.log("IN HERE");
-   // console.log(final_contents);
    final_contents.forEach(obj => {
    if(obj.title != null)
    {

@@ -5,6 +5,7 @@ module.exports = app => {
 
   // Create a new Category
   router.post("/", newsApi.headlines);
+  
 
 
 
