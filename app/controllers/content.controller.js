@@ -1,5 +1,6 @@
 const db = require("../models");
 const Contents = db.content;
+const Categories = db.categories;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
@@ -49,7 +50,7 @@ console.log(req.body);
 
 exports.findAll = (req, res) => {
   const categories_id = req.query.categories_id;
-  var condition = categories_id ? { id: { [Op.like]: `%${categories_id}%` } } : null;
+  //var condition = categories_id ? { id: { [Op.like]: `%${categories_id}%` } } : null;
   var cond = categories_id ? { categories_id: { [Op.like]: `%${categories_id}%` } } : null;
 
   Contents.findAll({
@@ -66,6 +67,9 @@ exports.findAll = (req, res) => {
     });
   });
 };
+
+
+
 
 
 

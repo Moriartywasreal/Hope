@@ -27,6 +27,7 @@ db.content.belongsTo(db.categories, {
    foreignKey: "categories_id",
 });
 
+
 db.content.belongsTo(db.users, {
   foreignKey: "users_id",
 });

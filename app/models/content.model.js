@@ -1,3 +1,5 @@
+//This file describes the content table in our database.
+
 module.exports = (sequelize, DataTypes) => {
   const Content = sequelize.define("content", {
     content: {

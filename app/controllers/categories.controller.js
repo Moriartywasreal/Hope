@@ -1,17 +1,30 @@
 const db = require("../models");
 const Categories = db.categories;
 const Op = db.Sequelize.Op;
+const Logger = require('../services/logger_service')
+const bodyParser = require('body-parser');
+const express = require('express')
+const app = express();
+var datetime = new Date();
+datetime=datetime.toISOString().slice(0,10);
+const logger = new Logger(datetime);
 
-// Create and Save a new Tutorial
+
+
+// Create and Save a new Category
 exports.create = (req, res) => {
-console.log(req.body);
+  logger.setLogData(req.query);
+  logger.info("Request recieved at /categories/");
 // Validate request
   if (!req.body.title) {
+    logger.error("Title can not be empty", req.body);
     res.status(400).send({
-      message: "content can not be empty!"
+      message: "Title can not be empty!"
     });
     return;
   }
+
+
 
 // Create a Tutorial
   const categories = {
@@ -23,9 +36,14 @@ console.log(req.body);
   // Save Tutorial in the database
   Categories.create(categories)
     .then(data => {
+      if(!req.body.description){
+        logger.warn("Description can not be empty", req.categories);
+      }
+      logger.info("Category created successfully");
       res.send(data);
     })
     .catch(err => {
+      logger.error("Some error occurred while creating the Category." ,err);
       res.status(500).send({
         message:
           err.message || "Some error occurred while creating the Category."
