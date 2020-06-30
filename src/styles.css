@@ -43,3 +43,5 @@ small, .small {
     font-weight: 400;
 }
 .form-group input, .form-group textarea, .form-group select{font-size: 15px !important;}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

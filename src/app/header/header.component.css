@@ -1,0 +1,54 @@
+.l-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    background-image:url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/13708472/VRG_ILLO_2691_MITS_002_masthead.0.jpg);
+    padding-bottom: 204px;
+    max-height: 298px;
+}
+
+.l-wrapper h1 {
+    color: white;
+    font-size: 150px;
+    font-weight: bold;
+    margin-left: 35%;
+    padding-top: 35px;
+}
+
+.l-wrapper small {
+    color: white;
+    font-size: 17px;
+    margin-left: 37%;
+}
+
+.cat-menu{
+    background-color: black;
+    max-height: 55px;
+}
+
+.cat-link{
+    color: white !important; 
+    padding-right: 4.5rem !important;
+    padding-left: 2.5rem !important;
+}
+
+.right-cat-link{
+    color: white !important; 
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+}
+
+.social i:hover {
+    color: #1877F2;
+}
+
+.social-fb i:hover {
+    color: #1877F2;
+}
+
+.social-twit i:hover {
+    color: #1da1f2;
+}
+
+.cat-link:hover {
+    color: #df7e89 !important;
+}

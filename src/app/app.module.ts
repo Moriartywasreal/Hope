@@ -10,6 +10,9 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { QuoteComponent } from './quote/quote.component';
 import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 // import { RecipiesComponent } from './recipies/recipies.component';
@@ -34,7 +37,9 @@ import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
     BrowserModule,
     HttpClientModule,
     RoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

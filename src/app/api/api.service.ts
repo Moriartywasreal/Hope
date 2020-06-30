@@ -10,6 +10,7 @@ import { Content } from '../model/content';
 })
 export class ApiService {
   apiURL: string = 'http://localhost:8080/api';
+  // apiURL: string = 'http://3.20.227.53:8080/api';
 
   constructor(private httpClient: HttpClient) {}
 

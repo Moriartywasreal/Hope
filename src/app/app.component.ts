@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ApiService } from './api/api.service';
 import { Category } from './model/category';
 
+declare var jQuery:any;
+
 
 @Component({
   selector: 'app-root',
