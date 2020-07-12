@@ -26,14 +26,14 @@ exports.create = (req, res) => {
 
 
 
-// Create a Tutorial
+// Create a Category
   const categories = {
     title: req.body.title,
     description: req.body.description
 
   };
 
-  // Save Tutorial in the database
+  // Save Category in the database
   Categories.create(categories)
     .then(data => {
       if(!req.body.description){
@@ -46,23 +46,26 @@ exports.create = (req, res) => {
       logger.error("Some error occurred while creating the Category." ,err);
       res.status(500).send({
         message:
-          err.message || "Some error occurred while creating the Category."
+          err.message || "Oops! It's not you,its us.We will be up and running soon"
       });
     });
 };
 
 
-// Retrieve all Tutorials from the database.
+// Retrieve all Categories from the database.
 
 exports.findAll = (req, res) => {
   const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
-
+  logger.setLogData(req.query);
+  logger.info("Request recieved at /categories/");
   Categories.findAll({ where: condition })
     .then(data => {
+      logger.info("Categories fetched successfully");
       res.send(data);
-    })
+      })
     .catch(err => {
+      logger.error("Some error occurred while retrieving categories.", err);
       res.status(500).send({
         message:
           err.message || "Some error occurred while retrieving categories."
@@ -75,49 +78,59 @@ exports.findAll = (req, res) => {
 
 
 
-// Find a single Tutorial with an id
+// Find a single Category with an id
 exports.findOne = (req, res) => {
  const id = req.params.id;
-
+ logger.setLogData(req.query);
+ logger.info("Request recieved at /categories/:id", id);
   Categories.findByPk(id)
     .then(data => {
+      logger.info("Category fetched successfully");
       res.send(data);
     })
     .catch(err => {
+      logger.error("Error retrieving Category with id=" + id);
       res.status(500).send({
-        message: "Error retrieving Tutorial with id=" + id
+        message: "Error retrieving Category with id=" + id
       });
     });
 };
 
 
 
-// Update a Tutorial by the id in the request
+// Update a Category by the id in the request
 exports.update = (req, res) => {
   const id = req.params.id;
-
+  logger.setLogData(req.query);
+  logger.info("Request recieved at /categories/:id", id);
   Categories.update(req.body, {
     where: { id: id }
   })
     .then(num => {
       if (num == 1) {
+        logger.info("Category was updated successfully.");
         res.send({
           message: "Category was updated successfully."
         });
       } else {
+        logger.error("Cannot update Category with id=",id);
+        // logger.error("Request Body : "req.body);
         res.send({
           message: `Cannot update Category with id=${id}. Maybe Category was not found or req.body is empty!`
         });
       }
     })
     .catch(err => {
+      logger.error("Cannot update Category with id=",id);
+      // logger.error("Request Body : "req.body);
+      logger.error("Error : ",err);
       res.status(500).send({
         message: "Error updating Category with id=" + id
       });
     });
 };
 
-// Delete a Tutorial with the specified id in the request
+// Delete a Category with the specified id in the request
 exports.delete = (req, res) => {
   const id = req.params.id;
 
@@ -142,7 +155,7 @@ exports.delete = (req, res) => {
     });
 };
 
-// Delete all Tutorials from the database.
+// Delete all Categorys from the database.
 exports.deleteAll = (req, res) => {
   Categories.destroy({
     where: {},

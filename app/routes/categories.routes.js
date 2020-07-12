@@ -1,3 +1,6 @@
+// 1.This file handles the routes related to categories and getting the data inside our databases.
+// 2.This file refers to functions in the categories.controller.js.
+
 module.exports = app => {
   const categories = require("../controllers/categories.controller.js");
 

@@ -58,6 +58,7 @@ require("./app/routes/content.routes")(app);
 require("./app/routes/users.routes")(app);
 require("./app/routes/fileupload.routes")(app);
 require("./app/routes/autoContent.routes")(app);
+require("./app/routes/reddit.routes")(app);
 
 // set port, listen for requests
 
