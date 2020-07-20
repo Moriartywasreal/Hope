@@ -1,0 +1,113 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+.backlightgryborder{
+    border: 2px solid #f1f1f1;}
+    .backlightgry{background: #f1f1f1;
+        padding: 10px;} 
+  .backlightgreenborder{
+      border: 2px solid #d9edf7;
+      display: grid;
+      margin: 20px;
+  }
+  .backlightgreen{background: #d9edf7;
+ } 
+ .cbtm{    height: 43px;
+    width: 150px;
+    border-radius: 0;}
+.backgry{    padding: 15px; 
+    background: #f1f1f1;}
+    .mat-expansion-panel {
+        border-radius: 0 !important;
+        margin-bottom: 1px;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    }
+    .backtrans{ padding: 20px;}
+    .backblueactive{background: #3f51b5;
+        padding: 20px;}
+        .backblueactive a {color: white;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .mat-card-actions {
+        margin-left: 0; 
+    }
+    .btns{color: #fff;
+        background-color: #dc3545;
+        border-color: #dc3545;
+        width: 45%;
+        color: white;
+        border-radius: 0;}
+        .btnd{    color: #fff;
+            background-color:#17ab39;
+            border-color: #1e7e34;
+            width: 47%;
+            color: white;
+            border-radius: 0;}
+     
+      .fixwidth{ min-width: 235px;    float: left;
+        margin: 7px;}
+      .example-header-image { 
+        background-size: cover;
+      }
+      .example-card-c img{    height: 58px;
+        width: 58px;
+        margin: 0;
+        border-radius: 50%;
+        /* flex-shrink: 0; */
+        background-size: cover;}
+        /* .listp:before{content: "•";
+            margin: 0 10px -55px 0;
+            color: #ff0000;
+            font-size: 30px;
+            line-height: 0;} */
+            .borderop{    border: 1px solid #928e8e52;
+                border-bottom: none;
+                margin-top: -11px;
+                margin-left: -14px;
+                margin-right: -14px;}
+                .circelred{height: 11px;
+                    border: 3px solid #de1427;
+                    width: 11px;
+                    background: #f1f1f1;
+                    border-radius: 55px;
+                    float: left;margin-top: 5px !important;
+                    margin-right: 11px;} 
+                    .circelgreen{height: 11px;
+                        border: 3px solid #17b33b;
+                        width: 11px;
+                        background: #f1f1f1;
+                        border-radius: 55px;
+                        float: left;margin-top: 6px !important;
+                        margin-right: 11px;}
+                .mattitle{font-size: 15px;
+                    color: #12b7af;
+                    font-weight: 500;}
+                    .matcstm h3 { 
+                        margin: 0 0 0px;
+                    }
+                .mat-card-header-text-cust {
+                    margin: 5px 0 0 69px;
+                }
+                .listh span{    display: block;
+                    line-height: 33px;
+                    font-size: 13px;
+                    color: #8c8b8b;
+                    margin-top: -10px;}

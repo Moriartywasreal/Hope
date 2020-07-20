@@ -45,3 +45,10 @@ small, .small {
 .form-group input, .form-group textarea, .form-group select{font-size: 15px !important;}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.backlightgryborder{
+  border: 2px solid #f1f1f1;}
+  .backlightgry{background: #f1f1f1;
+      padding: 10px;} 
+      .backlightgreen{background: #d9edf7;
+        padding: 10px;}

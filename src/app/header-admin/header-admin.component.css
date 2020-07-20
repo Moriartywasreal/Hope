@@ -1,0 +1,93 @@
+.backlightgryborder{
+    border: 2px solid #f1f1f1;}
+    .backlightgry{background: #f1f1f1;
+        padding: 10px;} 
+  .backlightgreenborder{
+      border: 2px solid #d9edf7;
+      margin: 20px;
+  }
+   
+.mat-tab-label {
+    width: 268px !important;}
+.mat-typography h3 { 
+    margin: 0;
+}
+.mat-typography span{font-size: 12px;
+    color: #a29f9f;}
+
+.mat-tab-label {
+    min-width: 25px !important;
+    padding: 5px;
+    background-color: transparent;
+    color:#7d7d7dde;
+    font-weight:normal !important;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    min-width: 268px !important;
+    padding: 5px;
+    background-color: #3f51b5 !important;
+    color: #fafafa;
+    font-weight: normal;
+}
+.mat-tab-labels {
+    background: #d9edf7;
+}
+.crow{margin:0px}
+/* Styles for the ink bar */
+.mat-ink-bar {
+    background-color: #ff000000;
+}
+.mat-drawer-container {
+    background-color: #ffffff;
+    color: rgba(0,0,0,.87);
+}
+
+
+
+.fieldsetc{        padding: 1px 10px; 
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    margin: 39px 0;
+ }
+legend {
+    background-color: white;
+    color: #abaaaa;
+    width: auto;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding: 0px 10px;
+}
+.filpara{padding: 0 11px;
+    margin: 0;
+    margin: 0 0 6px !important;
+    color: #585858;
+    margin-bottom: 8px;}
+    .form-control:focus {
+        color: #495057;
+        background-color: #fff;
+        outline: 0;
+        box-shadow: none;
+    }
+    .cbuttonm{float: right;
+        margin-bottom: 20px;
+    border-radius: 4px;
+    margin-left: 12px;}
+
+
+        .mat-drawer-content{height: 100%;
+            overflow-y: scroll;
+            border: 1px solid #e9e8f0;
+            padding: 10px;}
+        .mat-drawer-content::-webkit-scrollbar {
+          width: 8px;               /* width of the entire scrollbar */
+        }
+        .mat-drawer-content::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 4px grey;
+        }
+        .mat-drawer-content::-webkit-scrollbar-thumb {
+          background-color: #19194d;  
+        }
+
+ 

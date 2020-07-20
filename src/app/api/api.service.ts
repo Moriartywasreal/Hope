@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+
 import { Category } from '../model/category';
 import { Content } from '../model/content';
 
@@ -15,7 +16,10 @@ export class ApiService {
   constructor(private httpClient: HttpClient) {}
 
   public getCategories(){
-    return this.httpClient.get<Category[]>(`${this.apiURL}/categories`);
+    return this.httpClient.get<Category[]>(`${this.apiURL}/categories`)
+          .retry(2)
+          // .catch(e => this.handleError("Get Users Error", e));
+    // return this.httpClient.get<Category[]>(`${this.apiURL}/categories`);
   }
 
   public getCategoryById(cat_id){
@@ -28,8 +32,16 @@ export class ApiService {
     return this.httpClient.get<Content[]>(`${this.apiURL}/Content`);
   }
 
+  public getContentById(content_id){
+    return this.httpClient.get<Content>(`${this.apiURL}/Content/`+content_id);
+  }
+
   public getContentsByCategoryId(cat_id){
     return this.httpClient.get<Content[]>(`${this.apiURL}/Content/?categories_id=`+cat_id);
+  }
+
+  public approveContent(data){
+    return this.httpClient.put<Content>(`${this.apiURL}/Content/`+data.id, JSON.stringify(data));
   }
 
   public postContent(data){

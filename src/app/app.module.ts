@@ -13,6 +13,29 @@ import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 
+import {MatTabsModule} from '@angular/material/tabs'; 
+import {MatTableModule} from '@angular/material/table';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { AdminComponent } from './admin/admin.component';
+import { HeaderAdminComponent } from './header-admin/header-admin.component';
+import { RootNavComponent } from './root-nav/root-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+ 
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatCheckboxModule} from '@angular/material/checkbox'; 
+import {MatStepperModule} from '@angular/material/stepper';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatDialogModule} from '@angular/material/dialog';
+import { NewscontentComponent } from './newscontent/newscontent.component'; 
+
 
 
 // import { RecipiesComponent } from './recipies/recipies.component';
@@ -31,7 +54,11 @@ import {MatCardModule} from '@angular/material/card';
     FooterComponent,
     AboutUsComponent,
     QuoteComponent,
-    AddQuoteComponent
+    AddQuoteComponent,
+    AdminComponent,
+    HeaderAdminComponent,
+    RootNavComponent,
+    NewscontentComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +66,15 @@ import {MatCardModule} from '@angular/material/card';
     RoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatTabsModule,MatTableModule,MatDatepickerModule,MatNativeDateModule,MatFormFieldModule,MatSelectModule,
+     MatCardModule,MatExpansionModule,MatCheckboxModule,MatCardModule,MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

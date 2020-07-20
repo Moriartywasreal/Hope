@@ -1,0 +1,74 @@
+<div class="backlightgryborder">
+    <div class="backlightgry"><div class="row crow">
+        <div class="col-md-12"><h3><a >View Candidate</a></h3></div> 
+    </div>
+</div>
+
+<div class="backlightgreenborder">
+    <div class="backlightgreen"><div class="row crow">
+      <div class="col-md-3" ><div class="backtrans "><a>complet interview condidates</a></div></div>
+      <div class="col-md-3" ><div class="backtrans "><a>complet interview condidates</a></div></div>
+      <div class="col-md-3" ><div class="backblueactive"><a>complet interview condidates</a></div></div>
+      <div class="col-md-3"> 
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>     </div>
+</div>
+
+
+
+<div class="backgry">
+<!-- <mat-expansion-panel  *ngFor="let que of ques ; let i = index" >
+    <mat-expansion-panel-header>
+      <mat-checkbox color="primary"  name="sizecb[]" value="{{que.id}}" ([ngModel])="que.state">{{que.name}}</mat-checkbox>
+    </mat-expansion-panel-header>
+    Angular is a TypeScript-based open-source web application framework, developed and maintained by Google. It offers an easy and powerful way of building front end web-based applications.
+  </mat-expansion-panel> 
+ -->
+
+<div class="row"><div class="col-md-9">
+  <!-- <app-example-reusable  [inputVar]='headline'  [completinterviewname]='completinterviewnames' -->
+  <!-- <app-example-reusable  [inputVar]='headline'  [completinterviewname]='completinterviewnames'
+  [completinterviewdeg]='completinterviewdegs'
+  [completinterviewdate]='completinterviewdates'
+  [completinterviewexp]='completinterviewexps'
+   [completinterviewcontact]='completinterviewcontacts' ></app-example-reusable>
+
+  -->
+  
+  <mat-card class="example-card cstmcard-cla fixwidth"  *ngFor="let card of obs | async">
+    <mat-card-header>
+      <div mat-card-avatar class="example-card-c">  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+      </div> 
+    </mat-card-header>
+    <div class="borderop"></div>
+    <div class="mat-card-header-text mat-card-header-text-cust"><mat-card-title class="mattitle">{{card.name}}</mat-card-title>
+      <mat-card-subtitle>{{card.num}}</mat-card-subtitle></div>
+                     
+    <mat-card-content class="matcstm">
+      <div class="circelred"></div><h3 class="listh">{{card.deg}}
+        <span>{{card.date}}</span>
+      </h3>
+      <div class="circelgreen"></div><p class="listp">{{card.name}}</p>
+      <small>{{card.name}}</small>
+    </mat-card-content>
+    <mat-card-actions>
+      <button  class="btns" mat-raised-button (click)="dialog()" >Evaluter</button>
+      <button mat-button class="btnd">View Profile</button>
+    </mat-card-actions>
+  </mat-card>
+  
+
+
+</div>
+<div class="col-md-3"></div>
+<div class="row"><div class="col-md-12"><mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator></div> 
+</div>
+</div>
+
+
+
+</div>
+</div>
+  </div>
+  

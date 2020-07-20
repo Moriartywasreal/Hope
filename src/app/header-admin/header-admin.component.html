@@ -1,0 +1,69 @@
+<div class="backlightgryborder">
+    <div class="backlightgry">
+      <div class="row crow">
+        <div class="col-md-12">
+          <h3>Approve News Content</h3>
+          <span>Approve a news with positive vibe...</span>
+        </div> 
+      </div>
+    </div>
+  
+  <div class="backlightgreenborder">
+  
+   
+  <mat-tab-group  animationDuration="0ms" [backgroundColor]="bgColor" [color]="color" >
+      <mat-tab>
+        <ng-template mat-tab-label matTaContent>
+         <h1>News Details.</h1>
+        </ng-template>
+        <section id="form">
+          <div class="container ">
+            <div class="row">
+              <div class="col-md-12  ">
+                <div class="row">
+                  <div class="col-md-12">
+                    <form>
+                        <div class="form-row">
+                          
+                          <div class="form-group col-md-12">                    
+                           <fieldset class="fieldsetc">
+                            <legend>Title</legend>
+                            <p class="filpara">{{content.title}}</p>
+                           </fieldset>
+                           </div>
+                          <div class="form-group col-md-2">
+                            <h5 class="text-left">Description</h5> 
+                           </div>
+                            <div class="form-group col-md-10"> 
+                             <input type="name" class="form-control" name="description" id="inputDado" placeholder="{{content.description}}">
+                           </div>
+                          <div class="form-group col-md-2">
+                            <h5 class="text-left">Content</h5> 
+                           </div>
+                            <div class="form-group col-md-10"> 
+                             <!-- <input type="name" class="form-control" id="inputDado" placeholder="Seu nome"> -->
+                             <textarea class="form-control">{{content.content}}</textarea>
+                           </div>
+                          
+                          
+                          
+                          
+                          
+                          
+  
+     
+                       
+                        </div> 
+                       
+                        <button type="submit" class="btn btn-primary cbuttonm" (click)="approve(content)">Approve</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </mat-tab>
+     
+    </mat-tab-group>
+    </div></div>

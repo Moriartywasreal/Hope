@@ -2,6 +2,7 @@ import { Category } from './category'
 
 export class Content {    
     id: number;
+    title:String;
     content: String;
     description: String;
     categories_id: number;
