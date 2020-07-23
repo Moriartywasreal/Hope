@@ -1,0 +1,45 @@
+<div class="backlightgryborder">
+    <div class="backlightgry">
+        <div class="row crow">
+          <div class="col-md-10">
+              
+                <h3>News Categories</h3>
+                <span>View all Categories...</span>
+            </div>
+                <div class="col-md-2 padding0">
+                <button type="button" class="btn btncstm" (click)="addClick()" >Add New Category</button>
+                </div>
+              
+          </div> 
+        </div>
+      </div>
+    <div class="backlightgreenborder">
+        <div class="backlightgry" *ngFor="let category of categories"> 
+            <div class="row crow">
+                <!-- <div class="col-md-2"><img src="{{content.picture_url}}" class="img-part"></div> -->
+                <div class="col-md-10">
+                    <h2>{{category.title}}</h2>
+                    <p>{{category.description}}</p></div>
+                    <div class="col-md-2 padding0">
+                  
+    <button type="button" class="btn btncstm" (click)="btnClick(category.id)" >Edit</button></div>
+                <!-- <div class="col-md-12">
+                    <h3>All News</h3>
+                    <span>Get all the news live...</span>
+                </div>  -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="backlightgreenborder">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-4 img-part">
+                    aaaaaaaaaaaaaaa
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div> -->

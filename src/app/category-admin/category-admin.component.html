@@ -1,9 +1,13 @@
 <div class="backlightgryborder">
     <div class="backlightgry">
       <div class="row crow">
-        <div class="col-md-12">
-          <h3>Approve News Content</h3>
-          <span>Approve a news with positive vibe...</span>
+        <div class="col-md-12" *ngIf="!updateMode">
+          <h3>Add New Category</h3>
+          <span>Add new news category to be more specific...</span>
+        </div>
+        <div class="col-md-12" *ngIf="updateMode">
+          <h3>Update Category</h3>
+          <span>Update news category to be more specific...</span>
         </div> 
       </div>
     </div>
@@ -14,7 +18,7 @@
   <mat-tab-group  animationDuration="0ms" [backgroundColor]="bgColor" [color]="color" >
       <mat-tab>
         <ng-template mat-tab-label matTaContent>
-         <h1>News Details.</h1>
+         <h1>Category Details.</h1>
         </ng-template>
         <section id="form">
           <div class="container ">
@@ -26,25 +30,19 @@
                       
                         <div class="form-row">
                           
-                          <div class="form-group col-md-12">                    
-                           <fieldset class="fieldsetc">
-                            <legend>Title</legend>
-                            <p class="filpara" >{{metaData.controls.title.value}}</p>
-                           </fieldset>
-                           </div>
-                          <div class="form-group col-md-2">
-                            <h5 class="text-left">Description</h5> 
-                           </div>
+                            <div class="form-group col-md-2">
+                                <h5 class="text-left">Title</h5> 
+                            </div>
                             <div class="form-group col-md-10"> 
-                             <input type="name" class="form-control" id="inputDado" formControlName="description" placeholder="Enter Description here" (change)="postContent()">
+                             <input type="name" class="form-control" id="inputDado" formControlName="title" placeholder="Enter Title for Category" (change)="postContent()">
                            </div>
-                          <div class="form-group col-md-2">
-                            <h5 class="text-left">Content</h5> 
-                           </div>
+                            <div class="form-group col-md-2">
+                                <h5 class="text-left">Description</h5> 
+                            </div>
                             <div class="form-group col-md-10"> 
-                             <!-- <input type="name" class="form-control" id="inputDado" placeholder="Seu nome"> -->
-                             <textarea class="form-control" formControlName="content" (change)="postContent()"></textarea>
+                                <textarea class="form-control" formControlName="description" placeholder="Enter Category description" (change)="postContent()"></textarea>
                            </div>
+                          
                           
                           
                           
@@ -56,7 +54,8 @@
                        
                         </div> 
                        
-                        <button type="submit" class="btn btn-primary cbuttonm" (click)="approve(metaData)">Approve</button>
+                        <button type="submit" *ngIf="updateMode" class="btn btn-primary cbuttonm" (click)="updateCategory(metaData)">Update</button>
+                        <button type="submit" *ngIf="!updateMode" class="btn btn-primary cbuttonm" (click)="postCategory(metaData)">Add</button>
                     </form>
                   </div>
                 </div>

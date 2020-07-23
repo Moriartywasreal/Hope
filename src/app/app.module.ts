@@ -11,6 +11,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { QuoteComponent } from './quote/quote.component';
 import { AddQuoteComponent } from './quote/add-quote/add-quote.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 import {MatCardModule} from '@angular/material/card';
 
 import {MatTabsModule} from '@angular/material/tabs'; 
@@ -34,7 +35,9 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
-import { NewscontentComponent } from './newscontent/newscontent.component'; 
+import { NewscontentComponent } from './newscontent/newscontent.component';
+import { CategoryAdminComponent } from './category-admin/category-admin.component';
+import { ShowCategoryComponent } from './category-admin/show-category/show-category.component'; 
 
 
 
@@ -58,7 +61,9 @@ import { NewscontentComponent } from './newscontent/newscontent.component';
     AdminComponent,
     HeaderAdminComponent,
     RootNavComponent,
-    NewscontentComponent
+    NewscontentComponent,
+    CategoryAdminComponent,
+    ShowCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -75,6 +80,9 @@ import { NewscontentComponent } from './newscontent/newscontent.component';
     MatListModule,
     MatTabsModule,MatTableModule,MatDatepickerModule,MatNativeDateModule,MatFormFieldModule,MatSelectModule,
      MatCardModule,MatExpansionModule,MatCheckboxModule,MatCardModule,MatStepperModule
+      /* or CommonModule */, 
+      ReactiveFormsModule,
+      FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

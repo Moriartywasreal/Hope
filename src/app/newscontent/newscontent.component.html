@@ -11,12 +11,12 @@
         <div class="backlightgry" *ngFor="let content of contents"> 
             <div class="row crow">
                 <div class="col-md-2"><img src="{{content.picture_url}}" class="img-part"></div>
-                <div class="col-md-9">
+                <div class="col-md-8">
                     <h2>{{content.title}}</h2>
                     <p>{{content.content}}</p></div>
-                    <div class="col-md-1 padding0">
-                        
-    <button type="button" class="btn btncstm" (click)="btnClick(content.id)" >Edit</button></div>
+                    <div class="col-md-2 padding0">
+    <button type="button" *ngIf="content.is_approved=='YES'" class="btn btncstm" [disabled]='"true"' >Approved</button>              
+    <button type="button" *ngIf="content.is_approved=='NO'" class="btn btncstm" (click)="btnClick(content.id)" >Edit</button></div>
                 <!-- <div class="col-md-12">
                     <h3>All News</h3>
                     <span>Get all the news live...</span>

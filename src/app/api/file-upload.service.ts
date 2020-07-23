@@ -11,8 +11,8 @@ import { FileModel } from '../model/fileModel';
   providedIn: 'root'
 })
 export class FileUploadService {
-  apiURL: string = 'http://localhost:8080/api/files/upload_photos';
-  // apiURL: string = 'http://3.20.227.53:8080/api/files/upload_photos';
+  // apiURL: string = 'http://localhost:8080/api/files/upload_photos';
+  apiURL: string = 'http://3.20.227.53:8080/api/files/upload_photos';
   fileReturn: String[];
 
   httpOptions = {

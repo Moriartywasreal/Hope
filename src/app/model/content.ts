@@ -10,5 +10,5 @@ export class Content {
     picture_location: String;
     category: Category;
     createdAt:Date;
-    updatedAt:Date;    
+    updatedAt:Date;
 }

@@ -23,16 +23,10 @@ export class NewscontentComponent implements OnInit {
   getContents(){
     console.log("getContents inside");
     this.apiService.getContents().subscribe(res => {
-      
-        
-      alert("hey");
       this.contents = res;
-
       for(let content of this.contents){
         content.content = content.content.split('[')[0];
       }
-      console.log(this.contents);
-
     })
   }
 
