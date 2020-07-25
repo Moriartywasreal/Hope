@@ -26,9 +26,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [
-              
-            ]
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -122,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FinalTemplate"
+    }
+  },
+  "defaultProject": "FinalTemplate",
+  "cli": {
+    "analytics": "95344487-1b09-4b78-8471-80eeb38808c9"
+  }
 }
